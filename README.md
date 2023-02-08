@@ -1,5 +1,5 @@
 # nftwebsite
-## Used in coordination with nftcollection repository to mint flag nfts on a website frontend hosted on [IPFS](https://ipfs.tech/)
+## Used in coordination with nftcollection repository to mint flag nfts on a website frontend
 
 ## Technology Stack & Tools
 
