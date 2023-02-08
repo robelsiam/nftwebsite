@@ -2,6 +2,7 @@ import './styles/App.css';
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import NFTGenerator from './utils/NFTGenerator.json';
+import jackblack from './assets/jackblackdancing.gif';
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -32,8 +33,6 @@ const App = () => {
           console.log("Found an authorized account:", account);
 					setCurrentAccount(account)
           
-          // Setup listener! This is for the case where a user comes to our site
-          // and ALREADY had their wallet connected + authorized.
           setupEventListener()
       } else {
           console.log("No authorized account found")
@@ -54,29 +53,23 @@ const App = () => {
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
 
-      // Setup listener! This is for the case where a user comes to our site
-      // and connected their wallet for the first time.
       setupEventListener() 
     } catch (error) {
       console.log(error)
     }
   }
 
-  // Setup our listener.
   const setupEventListener = async () => {
-    // Most of this looks the same as our function askContractToMintNft
+
     try {
       const { ethereum } = window;
 
       if (ethereum) {
-        // Same stuff again
+
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, NFTGenerator.abi, signer);
 
-        // THIS IS THE MAGIC SAUCE.
-        // This will essentially "capture" our event when our contract throws it.
-        // If you're familiar with webhooks, it's very similar to that!
         connectedContract.on("NewNFTMinted", (from, tokenId) => {
           console.log(from, tokenId.toNumber())
           alert(`Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
@@ -107,7 +100,7 @@ const App = () => {
         console.log("Mining...please wait.")
         await nftTxn.wait();
         console.log(nftTxn);
-        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
       } else {
         console.log("Ethereum object doesn't exist!");
@@ -129,7 +122,7 @@ const App = () => {
   );
 
   const renderMintUI = () => (
-    <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
+    <button onClick={askContractToMintNft} className="cta-button mint-button">
       Mint NFT
     </button>
   )
@@ -138,11 +131,21 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
+          <p className="header gradient-text">The Flag NFT Collection</p>
           <p className="sub-text">
           Each unique. Each beautiful. Claim yours today! Now!!
           </p>
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
           {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
+          <img alt="Jackblack" className="img" src={jackblack} />
         </div>
       </div>
     </div>
