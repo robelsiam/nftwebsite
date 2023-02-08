@@ -1,4 +1,4 @@
-### **nftwebsite **
+# nftwebsite
 used in coordination with nftcollection repository to mint flag nfts on a website frontend hosted on [IPFS](https://ipfs.tech/)
 for every redploy of NFTGenerator.sol in nftcollection:
 1. Update abi file in utils/NFTGenerator.json
