@@ -43,12 +43,12 @@ const App = () => {
       }
 
       /*
-      * Fancy method to request access to account.
+      * method to request access to account.
       */
       const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 
       /*
-      * Boom! This should print out public address once we authorize Metamask.
+      * this prints out public address once we authorize Metamask.
       */
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]); 
@@ -57,8 +57,11 @@ const App = () => {
     }
   }
 
+  /*
+  * update address for every redploy
+  */
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0xCf2199720C18c3f4eaA55B68F5ce14C9b4Bb9c8D";
+    const CONTRACT_ADDRESS = "0xF6de70E09E8EE72ea7235F70Dfff3F1dDdCe7391";
   
     try {
       const { ethereum } = window;
