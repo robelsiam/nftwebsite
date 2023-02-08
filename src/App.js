@@ -58,7 +58,7 @@ const App = () => {
   }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_GOERLI_CONTRACT_ADDRESS";
+    const CONTRACT_ADDRESS = "0xCf2199720C18c3f4eaA55B68F5ce14C9b4Bb9c8D";
   
     try {
       const { ethereum } = window;
