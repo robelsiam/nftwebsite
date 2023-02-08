@@ -9,7 +9,7 @@
 - Install [NodeJS](https://nodejs.org/en/)
 
 ## for every redploy of `NFTGenerator.sol` in `nftcollection`:
-### 1. Update abi file in `utils/NFTGenerator.json`
+### 1. Update abi key in `utils/NFTGenerator.json`
 ### 2. Update `CONTRACT_ADDRESS` in `App.js`
 
 ## Setting Up
