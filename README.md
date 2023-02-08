@@ -3,7 +3,7 @@
 
 ## for every redploy of `NFTGenerator.sol` in `nftcollection`:
 ### 1. Update abi file in `utils/NFTGenerator.json`
-### 2. `CONTRACT_ADDRESS` in `App.js`
+### 2. Update `CONTRACT_ADDRESS` in `App.js`
 
 ## Setting Up
 ### 1. Clone/Download the Repository
