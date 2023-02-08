@@ -5,8 +5,13 @@
 ### 1. Update abi file in `utils/NFTGenerator.json`
 ### 2. `CONTRACT_ADDRESS` in `App.js`
 
-## To get started clone this repo and follow these commands:
+## Setting Up
+### 1. Clone/Download the Repository
 
-### 1. Run `npm install` at the root of your directory
-### 2. Run `npm run start` to start the project
+### 2. Install Dependencies:
+`$ npm install`
+`$ npm install react-spring`
+
+### 3. Start frontend
+`$ npm run start`
 
