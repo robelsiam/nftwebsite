@@ -27,9 +27,17 @@
   font-size: 25px;
   color: white;
 }
+.img {
+  float: center;
+  vertical-align: top;
+  max-width:2.7%;
+  height:auto;
+}
+
+
 
 .gradient-text {
-  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
+  background: -webkit-linear-gradient(left, #ffffff 30%, #6921dd 60%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,44 +57,16 @@
 }
 
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background: -webkit-linear-gradient(left, #1a26ae, #9277d0);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
+  background: -webkit-linear-gradient(left, #d6c400, #ff9d6f);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-right: 15px;
-}
-
-.opensea-button {
-  background-color: rgb(32, 129, 226);
-}
-
-.mint-count {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-}
-
-.twitter-logo {
-  width: 35px;
-  height: 35px;
-}
-
-.footer-text {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 /* KeyFrames */
